@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto X-Men - Seleção de Personagem</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="som-musica" src="https://codesandbox.io" loop></audio>
+    <audio id="som-hover" src="https://mixkit.co" preload="auto"></audio>
+    <audio id="som-selecionar" src="https://mixkit.co" preload="auto"></audio>
+    <audio id="som-sirene" src="https://mixkit.co" loop></audio>
+    <audio id="som-glitch" src="https://mixkit.co" preload="auto"></audio>
+    <audio id="som-teclado" src="https://mixkit.co" preload="auto"></audio>
+
+    <header class="cabecalho">
+        <button id="btn-musica" class="control-btn-premium">🎵 MÚSICA</button>
+        <img id="logo-xmen" class="logo" src="img/logo.svg" alt="Logo X-Men">
+        <button id="btn-secreto" class="secret-btn-premium">⚠️ CÉREBRO</button>
+    </header>
+
+    <main class="selecao-de-personagens">
+        <section class="personagens">
+            <h1 class="titulo">Selecione um personagem</h1>
+            
+            <ul class="lista-de-personagens">
+                <li class="personagem" id="ciclope">
+                    <img src="img/card-ciclope.jpg" alt="Ciclope">
+                </li>
+                <li class="personagem" id="jean-grey">
+                    <img src="img/card-jean-grey.jpg" alt="Jean Grey">
+                </li>
+                <li class="personagem" id="lince-negra">
+                    <img src="img/card-lince-negra.jpg" alt="Lince Negra">
+                </li>
+                <li class="personagem" id="tempestade">
+                    <img src="img/card-tempestade.jpg" alt="Tempestade">
+                </li>
+                <li class="personagem" id="vampira">
+                    <img src="img/card-vampira.jpg" alt="Vampira">
+                </li>
+                <li class="personagem selecionado" id="wolverine">
+                    <img src="img/card-wolverine.jpg" alt="Wolverine">
+                </li>
+                <li class="personagem" id="noturno">
+                    <img src="img/card-noturno.jpg" alt="Noturno">
+                </li>
+                <li class="personagem" id="magneto">
+                    <img src="img/card-magneto.jpg" alt="Magneto">
+                </li>
+            </ul>
+        </section>
+
+        <section class="personagem-grande" id="painel-destaque">
+            <div class="container-imagem-grande">
+                <img class="personagem-grande-imagem" id="foto-grande" src="img/card-wolverine.png" alt="Personagem Selecionado">
+            </div>
+            
+            <div class="informacoes-personagem">
+                <h2 class="nome-personagem" id="nome-personagem">Wolverine</h2>
+                <div class="tag-ameaca" id="tag-ameaca">NÍVEL DE AMEAÇA: BETA</div>
+                <p class="descricao-personagem" id="descricao-personagem">Seu poder mutante é o fator de cura acelerado, sentidos aguçados e garras de adamantium totalmente retraíveis.</p>
+
+                <div class="atributos-container">
+                    <div class="atributo-linha">
+                        <span class="atributo-nome">FORÇA</span>
+                        <div class="barra-fundo"><div class="barra-preenchimento" id="barra-forca"></div></div>
+                    </div>
+                    <div class="atributo-linha">
+                        <span class="atributo-nome">AGILIDADE</span>
+                        <div class="barra-fundo"><div class="barra-preenchimento" id="barra-agilidade"></div></div>
+                    </div>
+                    <div class="atributo-linha">
+                        <span class="atributo-nome">PODER</span>
+                        <div class="barra-fundo"><div class="barra-preenchimento" id="barra-poder"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="modal-alerta" class="modal">
+        <div class="modal-conteudo">
+            <h2>⚠️ ALERTA DO CÉREBRO ⚠️</h2>
+            <p>PRESENÇA DE MUTANTE NÍVEL ÔMEGA DETECTADA PRÓXIMA ÀS COORDENADAS DA MANSÃO X!</p>
+            <button id="fechar-modal" class="close-btn-modal">FECHAR TERMINAL</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
